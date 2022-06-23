@@ -5,18 +5,19 @@
     <title>Title</title>
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="container" id="focus">
         <form>
-            <input type="radio" id="A" name="questionForm" value="A">
-            <label id="answerA" for="A"></label><br>
-            <input type="radio" id="B" name="questionForm" value="B">
-            <label id="answerB" for="B"></label><br>
+            <input type="radio" id="optionA" name="questionForm" value="A">
+            <label id="answerA" for="optionA"></label><br>
+            <input type="radio" id="optionB" name="questionForm" value="B">
+            <label id="answerB" for="optionB"></label><br>
             <input type="button" value="Back" onclick="prevQuestion()">
             <input type="button" value="Next" onclick="nextQuestion()">
+            <p id="question">0/30</p>
         </form>
-        <script type="text/javascript" src="questions.json"></script>
         <script src="script.js"></script>
     </div>
 </body>
