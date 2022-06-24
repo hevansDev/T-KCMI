@@ -66,12 +66,12 @@ function prevQuestion() {
 }
 
 function getResults() {
-    console.log(answers.length);
     for (i=0; i < 30; i++) {
         q = questions[i+1];
         a = answers[i];
         v = q[a].type;
         results[v]+=1
     }
-    console.log(results)
+    localStorage.setItem('results', JSON.stringify(results));
+    document.location.href = "results.html";
 }
