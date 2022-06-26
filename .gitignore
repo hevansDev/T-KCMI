@@ -1,2 +1,6 @@
 .idea
 T-KCMI.iml
+.DS_Store
+
+out/
+node_modules/
