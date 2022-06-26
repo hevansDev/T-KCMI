@@ -10,10 +10,15 @@
 <body>
     <div class="container" id="focus">
         <form>
-            <input type="radio" id="optionA" name="questionForm" value="A">
-            <label id="answerA" for="optionA"></label><br>
-            <input type="radio" id="optionB" name="questionForm" value="B">
-            <label id="answerB" for="optionB"></label><br>
+            <div class="question">
+                <input type="radio" id="optionA" name="questionForm" value="A">
+                <label id="answerA" for="optionA"></label>
+            </div>
+            <div class="question">
+                <input type="radio" id="optionB" name="questionForm" value="B">
+                <label id="answerB" for="optionB"></label>
+            </div>
+
             <input type="button" value="Back" onclick="prevQuestion()">
             <input type="button" value="Next" onclick="nextQuestion()">
             <p id="question">0/30</p>
