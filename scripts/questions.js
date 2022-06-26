@@ -13,7 +13,7 @@ var questions = (function () {
     $.ajax({
         'async': false,
         'global': false,
-        'url': 'questions.json',
+        'url': '../assets/questions.json',
         'dataType': 'json',
         'success': function (data) {
             json = data;
@@ -73,5 +73,5 @@ function getResults() {
         results[v]+=1
     }
     localStorage.setItem('results', JSON.stringify(results));
-    document.location.href = "results.html";
+    document.location.href = "../pages/results.html";
 }
