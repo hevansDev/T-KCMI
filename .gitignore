@@ -1,2 +1,4 @@
 .idea
 T-KCMI.iml
+out/
+node_modules/
