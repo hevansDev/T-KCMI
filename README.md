@@ -1,8 +1,14 @@
 # T-KCMI
 
-## Initial setup
+## Dependencies
 
-https://www.electronjs.org/docs/latest/tutorial/quick-start
+npm
+node
+
+## Run with npm
+
+npm install
+npm run
 
 ## Building the app
 
