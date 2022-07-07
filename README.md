@@ -10,7 +10,7 @@ node
 
 npm install
 
-npm run
+npm start
 
 ## Building the app
 
