@@ -36,12 +36,37 @@ function getResults() {
 }
 
 function displayResults(results) {
-    document.getElementById("competing").innerHTML= "Competing "+results["competing"];
-    document.getElementById("collaborating").innerHTML="Collaborating " +results["collaborating"];
-    document.getElementById("compromising").innerHTML="Compromising "+results["compromising"];
-    document.getElementById("avoiding").innerHTML="Avoiding "+results["avoiding"];
-    document.getElementById("accommodating").innerHTML="Accommodating "+results["accommodating"];
+    const resultsElement = document.createElement("div");
+    resultsElement.id = "results";
+    resultsElement.className = "jumbotron d-flex flex-column";
 
+    const title = document.createElement("h1");
+    title.innerHTML="Your Results";
+
+    const competing = document.createElement("h2");
+    competing.innerHTML= "Competing "+results["competing"];
+
+    const collaborating = document.createElement("h2");
+    collaborating.innerHTML="Collaborating " +results["collaborating"];
+
+    const compromising = document.createElement("h2");
+    compromising.innerHTML="Compromising "+results["compromising"];
+
+    const avoiding = document.createElement("h2");
+    avoiding.innerHTML="Avoiding "+results["avoiding"];
+
+    const accommodating = document.createElement("h2");
+    accommodating.innerHTML="Accommodating "+results["accommodating"];
+
+    resultsElement.appendChild(title);
+    resultsElement.appendChild(competing);
+    resultsElement.appendChild(collaborating);
+    resultsElement.appendChild(compromising);
+    resultsElement.appendChild(avoiding);
+    resultsElement.appendChild(accommodating);
+    document.getElementById("main").appendChild(resultsElement);
+
+    window.scrollTo(0, document.body.scrollHeight);
 }
 
 

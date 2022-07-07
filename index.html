@@ -10,7 +10,7 @@
     <script src="scripts/results.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div id="main" class="container">
         <h1>Instructions</h1>
         <p>Consider situations in which you find your wishes differing from those of another person. How do
             you usually respond to such situations?</p>
@@ -202,14 +202,9 @@
                     <div class="question"><input type="radio" id="radio30B" value="collaborating" name="30"><label id="label30B" for="radio30B">I always share the problem with the other person so that we can work it out.</label></div>
                 </div>
             </div>
-            <div class="jumbotron d-flex flex-column" id="results">
-                <div id="competing"></div>
-                <div id="collaborating"></div>
-                <div id="compromising"></div>
-                <div id="avoiding"></div>
-                <div id="accommodating"></div>
+            <div class="row justify-content-center">
+                <button type="button" class="btn btn-primary btn-lg" onclick="validateAnswers()">Get results</button>
             </div>
-            <input type="button" value="Submit" onclick="validateAnswers()">
         </form>
     </div>
 </body>
