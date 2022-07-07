@@ -79,8 +79,8 @@ function updateResults(results) {
 }
 
 function resetPage() {
-    window.scrollTo(0, 0);
     location.reload();
+    window.scrollTo(0, 0);
 }
 
 
