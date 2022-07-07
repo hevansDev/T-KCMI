@@ -1,3 +1,9 @@
+const competing = document.createElement("h2");
+const collaborating = document.createElement("h2");
+const compromising = document.createElement("h2");
+const avoiding = document.createElement("h2");
+const accommodating = document.createElement("h2");
+
 function validateAnswers() {
     var valid = true;
     for (i=0; i < 30; i++) {
@@ -11,6 +17,10 @@ function validateAnswers() {
         }
     }
     if (valid) {getResults();};
+}
+
+function tintCard(element) {
+    element.parentNode.parentNode.style.backgroundColor= "#90EE90";
 }
 
 function getResults() {
@@ -36,27 +46,16 @@ function getResults() {
 }
 
 function displayResults(results) {
+    if (document.getElementById("results")) {
+        updateResults(results);
+        return;
+    }
     const resultsElement = document.createElement("div");
     resultsElement.id = "results";
     resultsElement.className = "jumbotron d-flex flex-column";
 
     const title = document.createElement("h1");
     title.innerHTML="Your Results";
-
-    const competing = document.createElement("h2");
-    competing.innerHTML= "Competing "+results["competing"];
-
-    const collaborating = document.createElement("h2");
-    collaborating.innerHTML="Collaborating " +results["collaborating"];
-
-    const compromising = document.createElement("h2");
-    compromising.innerHTML="Compromising "+results["compromising"];
-
-    const avoiding = document.createElement("h2");
-    avoiding.innerHTML="Avoiding "+results["avoiding"];
-
-    const accommodating = document.createElement("h2");
-    accommodating.innerHTML="Accommodating "+results["accommodating"];
 
     resultsElement.appendChild(title);
     resultsElement.appendChild(competing);
@@ -66,7 +65,22 @@ function displayResults(results) {
     resultsElement.appendChild(accommodating);
     document.getElementById("main").appendChild(resultsElement);
 
+    updateResults(results);
+}
+
+function updateResults(results) {
+    competing.innerHTML= "Competing "+results["competing"];
+    collaborating.innerHTML="Collaborating " +results["collaborating"];
+    compromising.innerHTML="Compromising "+results["compromising"];
+    avoiding.innerHTML="Avoiding "+results["avoiding"];
+    accommodating.innerHTML="Accommodating "+results["accommodating"];
+
     window.scrollTo(0, document.body.scrollHeight);
+}
+
+function resetPage() {
+    window.scrollTo(0, 0);
+    location.reload();
 }
 
 
