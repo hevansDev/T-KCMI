@@ -1,19 +1,3 @@
 # T-KCMI
 
-## Dependencies
-
-npm
-
-node
-
-## Run with npm
-
-npm install
-
-npm start
-
-## Building the app
-
-npm install --save-dev @electron-forge/cli
-
-npm run make
+http://tkcmi-bucket.s3-website.eu-west-2.amazonaws.com/

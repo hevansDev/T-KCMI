@@ -9,3 +9,11 @@
   display: flex;
   gap: 10px;
 }
+
+.card {
+  margin-top:10px;
+}
+
+.btn {
+  margin:10px;
+}
