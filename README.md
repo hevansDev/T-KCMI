@@ -1,3 +1,3 @@
 # T-KCMI
 
-http://tkcmi-bucket.s3-website.eu-west-2.amazonaws.com/
+https://hughevans.dev/projects/tkcmi/
