@@ -1,6 +1,7 @@
 name: Upload to Website
 
 on:
+  workflow_dispatch:
   push:
     branches:
     - main
